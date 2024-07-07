@@ -14,5 +14,7 @@ logging.basicConfig(
     level=logging.INFO,
 )
 
+
+print("Logging file worked")
     
 

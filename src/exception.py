@@ -1,5 +1,6 @@
 import sys
 import os
+from logger import logging
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'S:/NEW/Projects/KN_ETE_ML_Project/')))
 from src.logger import logging
@@ -24,6 +25,14 @@ class CustomException(Exception):
         return self.error_msg
     
 
+print("Exception file worked")
+
+# if __name__ == "__main__":
+#     try:
+#         a=1/0
+#     except Exception as e:
+#         logging.info('Divide By Zero')
+#         raise CustomException(e,sys)
 
 
 
