@@ -5,8 +5,8 @@ from logger import logging
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'S:/NEW/Projects/KN_ETE_ML_Project/')))
 from src.logger import logging
 
-def error_message_detail(error, error_detail:sys):
-    _,_,exc_tb = error_detail.exc_info()
+def error_message_detail(error, error_details:sys):
+    _,_,exc_tb = error_details.exc_info()
     filename = exc_tb.tb_frame.f_code.co_filename
     line_number = exc_tb.tb_lineno
     e = str(error)
@@ -18,7 +18,7 @@ def error_message_detail(error, error_detail:sys):
 
 class CustomException(Exception):
     def __init__(self, error_msg, error_details:sys):
-        super.__init__(error_msg)
+        super().__init__(error_msg)
         self.error_msg = error_message_detail(error_msg, error_details=error_details)
     
     def __str__(self):
