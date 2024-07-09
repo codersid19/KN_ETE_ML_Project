@@ -9,6 +9,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
+catboost_info/
 develop-eggs/
 dist/
 downloads/
@@ -41,7 +42,6 @@ pip-delete-this-directory.txt
 htmlcov/
 .tox/
 .nox/
-.ebextensions/
 .coverage
 .coverage.*
 .cache
